@@ -5,28 +5,28 @@ import Breadcrumbs from "../../components/Common/Breadcrumb";
 import { Card, CardBody, Col, Container, Row } from "reactstrap";
 
 // Rating Plugin
-// import Rating from "react-rating";
-import Rating from "react-rating-tooltip";
+import Rating from "react-rating";
+import RatingTooltip from "react-rating-tooltip";
 
 class UiRating extends Component {
   constructor(props) {
-   super(props)
-   this.state = {
-    breadcrumbItems: [
+    super(props)
+    this.state = {
+      breadcrumbItems: [
         { title: "UI Elements", link: "#" },
-      { title: "Rating", link: "#" },
+        { title: "Rating", link: "#" },
       ],
       tooltipContent: ["Rate 1", "Rate 2", "Rate 3", "Rate 4", "Rate 5"],
       tooltipContentMore: ["1", "2", "3", "4", "5", "6", "7", "8"],
       tooltipContentHalf: ["6", "7", "8", "9", "10"],
       tooltipContentMiddle: [
-       "2",
+        "2",
         "3",
         "4",
         "5",
-         "6",
+        "6",
         "7",
-         "8",
+        "8",
         "9",
         "10",
         "11",
@@ -36,7 +36,7 @@ class UiRating extends Component {
       default: "",
       half: "",
       customize: "",
-     }
+    }
   }
 
   render() {
@@ -54,7 +54,7 @@ class UiRating extends Component {
                       <Col xl="3" md="4" sm="6">
                         <div className="p-4 text-center">
                           <h5 className="font-size-15 mb-3">Default rating</h5>
-                          <Rating
+                          <RatingTooltip
                             max={5}
                             onChange={rate => this.setState({ default: rate })}
                             ActiveComponent={
@@ -79,7 +79,7 @@ class UiRating extends Component {
                       <Col xl="3" md="4" sm="6">
                         <div className="p-4 text-center">
                           <h5 className="font-size-15 mb-3">Half rating</h5>
-                          <Rating
+                          <RatingTooltip
                             max={5}
                             onChange={rate => this.setState({ default: rate })}
                             ActiveComponent={
@@ -103,7 +103,7 @@ class UiRating extends Component {
                       <Col xl="3" md="4" sm="6">
                         <div className="p-4 text-center">
                           <h5 className="font-size-15 mb-3">Disabled rating</h5>
-                          <Rating
+                          <RatingTooltip
                             max={5}
                             onChange={rate => this.setState({ default: rate })}
                             ActiveComponent={
@@ -129,7 +129,7 @@ class UiRating extends Component {
                           <h5 className="font-size-15 mb-3">
                             Readonly rating with a value
                           </h5>
-                          <Rating
+                          <RatingTooltip
                             max={5}
                             onChange={rate => this.setState({ default: rate })}
                             ActiveComponent={
@@ -156,7 +156,7 @@ class UiRating extends Component {
                           <h5 className="font-size-15 mb-3">
                             Customized heart rating
                           </h5>
-                          <Rating
+                          <RatingTooltip
                             max={5}
                             onChange={rate =>
                               this.setState({ customize: rate })
@@ -183,7 +183,7 @@ class UiRating extends Component {
                       <Col xl="3" md="4" sm="6">
                         <div className="p-4 text-center">
                           <h5 className="font-size-15 mb-3">Only fill selected</h5>
-                          <Rating
+                          <RatingTooltip
                             max={5}
                             onChange={rate => alert("Rating : " + rate)}
                             ActiveComponent={
@@ -207,7 +207,7 @@ class UiRating extends Component {
                       <Col xl="3" md="4" sm="6">
                         <div className="p-4 text-center">
                           <h5 className="font-size-15 mb-3">Handle events</h5>
-                          <Rating
+                          <RatingTooltip
                             max={5}
                             onChange={rate => alert("Rating : " + rate)}
                             ActiveComponent={
@@ -231,7 +231,7 @@ class UiRating extends Component {
                       <Col xl="3" md="4" sm="6">
                         <div className="p-4 text-center">
                           <h5 className="font-size-15 mb-3">Customize tooltips</h5>
-                          <Rating
+                          <RatingTooltip
                             max={5}
                             tooltipContent={this.state.tooltipContent}
                             onChange={rate8 => this.setState({ default: rate8 })}
@@ -256,7 +256,7 @@ class UiRating extends Component {
                       <Col xl="3" md="4" sm="6">
                         <div className="p-4 text-center">
                           <h5 className="font-size-15 mb-3">Default rating</h5>
-                          <Rating
+                          <RatingTooltip
                             max={10}
                             tooltipContent={this.state.tooltipContentMore}
                             onChange={rate6 => this.setState({ default: rate6 })}
@@ -284,7 +284,7 @@ class UiRating extends Component {
                             Set start rate to 5 [6..10]
                           </h5>
 
-                          <Rating
+                          <RatingTooltip
                             max={5}
                             tooltipContent={this.state.tooltipContentHalf}
                             onChange={rate => this.setState({ default: rate })}
@@ -311,7 +311,7 @@ class UiRating extends Component {
                           <h5 className="font-size-15 mb-3">
                             Set start and stop rate [2..10]
                           </h5>
-                          <Rating
+                          <RatingTooltip
                             max={9}
                             tooltipContent={this.state.tooltipContentMiddle}
                             onChange={rate => this.setState({ default: rate })}
@@ -338,7 +338,7 @@ class UiRating extends Component {
                           <h5 className="font-size-15 mb-3">
                             Set start and stop rate [2..10] with step 2
                           </h5>
-                          <Rating
+                          <RatingTooltip
                             max={5}
                             tooltipContent={this.state.tooltipContentStep}
                             onChange={rate4 => this.setState({ default: rate4 })}
@@ -363,7 +363,7 @@ class UiRating extends Component {
                       <Col xl="3" md="4" sm="6">
                         <div className="p-4 text-center">
                           <h5 className="font-size-15 mb-3">Custom icons</h5>
-                          <Rating
+                          <RatingTooltip
                             max={5}
                             tooltipContent={this.state.tooltipContentStep}
                             onChange={rate1 => this.setState({ default: rate1 })}
@@ -388,7 +388,7 @@ class UiRating extends Component {
                       <Col xl="3" md="4" sm="6">
                         <div className="p-4 text-center">
                           <h5 className="font-size-15 mb-3">Fractional rating</h5>
-                          <Rating
+                          <RatingTooltip
                             max={5}
                             tooltipContent={this.state.tooltipContentStep}
                             onChange={rate2 => this.setState({ default: rate2 })}
