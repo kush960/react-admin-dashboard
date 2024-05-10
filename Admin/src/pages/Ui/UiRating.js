@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-//import Rating from "react-rating-tooltip";
-import Rating from 'react-rating-tooltip';
+
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb";
 import { Card, CardBody, Col, Container, Row } from "reactstrap";
 
 // Rating Plugin
 // import Rating from "react-rating";
+import Rating from "react-rating-tooltip";
 
 class UiRating extends Component {
   constructor(props) {
